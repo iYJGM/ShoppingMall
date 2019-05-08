@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.MainActivity"
+    android:orientation="vertical">
+    
+    <!--加载碎片-->
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+
+    <!--单选按钮：选择范围，可以监听旋转的按钮状态-->
+    <!--orientation="horizontal决定内部排列方式-->
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/home_bottom_parent_bg"
+        android:layout_gravity="bottom">
+
+        <!--国际化：把相同的样式属性提取到style，定义成公共的样式-->
+        <!--drawableTop:引入图片到button文字的上方显示-->
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:text="首页"
+            android:drawableTop="@drawable/home_button_selector"
+            android:paddingTop="10dp"
+            style="@style/MainButtonStyle"/>
+        <RadioButton
+            android:id="@+id/rb_type"
+            android:text="分类"
+            android:drawableTop="@drawable/type_button_selector"
+            android:paddingTop="10dp"
+            style="@style/MainButtonStyle"/>
+        <RadioButton
+            android:id="@+id/rb_community"
+            android:text="发现"
+            android:drawableTop="@drawable/community_button_selector"
+            android:paddingTop="10dp"
+            style="@style/MainButtonStyle"/>
+        <RadioButton
+            android:id="@+id/rb_cart"
+            android:text="购物车"
+            android:drawableTop="@drawable/cart_button_selector"
+            android:paddingTop="10dp"
+            style="@style/MainButtonStyle"/>
+        <RadioButton
+            android:id="@+id/rb_user"
+            android:text="我的"
+            android:drawableTop="@drawable/user_button_selector"
+            android:paddingTop="10dp"
+            style="@style/MainButtonStyle"/>
+    </RadioGroup>
+
+</LinearLayout>
